@@ -15,14 +15,15 @@ public class BallScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if ( Input.GetKeyUp(KeyCode.Space) && gameStarted == false) {
+        if (Input.GetKeyUp(KeyCode.Space) && gameStarted == false)
+        {
 
-            transform.SetParent (null);
+            transform.SetParent(null);
             rb.isKinematic = false;
 
             rb.AddForce(new Vector2(ballForce, ballForce));
             gameStarted = true;
         }
-	
-	}
+
+    }
 }
